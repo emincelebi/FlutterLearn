@@ -27,11 +27,11 @@ class StackLearn extends StatelessWidget {
             ),
           ),
           Positioned.fill(
-            child: Container(color: Colors.cyan),
             left: 20,
             right: 380,
             top: 50,
             bottom: 20,
+            child: Container(color: Colors.cyan),
           )
         ],
       ),

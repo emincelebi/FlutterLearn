@@ -11,27 +11,28 @@ class CardLearn extends StatelessWidget {
       body: Column(
         children: [
           Card(
+            elevation: 5.0,
+            shadowColor: Colors.blue,
+            
             margin: ProjectMargins.cardMargin,
-            child: SizedBox(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            child: const SizedBox(
               height: 100,
               width: 300,
               child: Center(child: Text('Ali')),
             ),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           ),
           Card(
             margin: ProjectMargins.cardMargin,
-            child: SizedBox(
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            child: const SizedBox(
               height: 100,
               width: 300,
               child: Center(child: Text('Ali')),
             ),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
           ),
           _CustomCards(
-            child: SizedBox(
+            child: const SizedBox(
               height: 100,
               width: 300,
               child: Center(child: Text('Ali')),
@@ -44,7 +45,7 @@ class CardLearn extends StatelessWidget {
 }
 
 class ProjectMargins {
-  static final cardMargin = EdgeInsets.all(10);
+  static const cardMargin = EdgeInsets.all(10);
   static final roundedRectangleBorder = RoundedRectangleBorder(borderRadius: BorderRadius.circular(20));
 }
 
