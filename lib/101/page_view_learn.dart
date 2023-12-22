@@ -29,18 +29,18 @@ class _PageViewLearnState extends State<PageViewLearn> {
             padding: const EdgeInsets.only(left: 20),
             child: Text(_currentPageIndex.toString()),
           ),
-          Spacer(),
+          const Spacer(),
           FloatingActionButton(
             onPressed: () {
               _pageController.previousPage(duration: _DurationUtility._durationLow, curve: Curves.slowMiddle);
             },
-            child: Icon(Icons.chevron_left),
+            child: const Icon(Icons.chevron_left),
           ),
           FloatingActionButton(
             onPressed: () {
               _pageController.nextPage(duration: _DurationUtility._durationLow, curve: Curves.slowMiddle);
             },
-            child: Icon(Icons.chevron_right),
+            child: const Icon(Icons.chevron_right),
           ),
         ],
       ),
@@ -50,9 +50,9 @@ class _PageViewLearnState extends State<PageViewLearn> {
         controller: _pageController,
         onPageChanged: _updatePageIndex,
         children: [
-          ImageLearn(),
+          const ImageLearn(),
           IconLearnView(),
-          StackLearn(),
+          const StackLearn(),
         ],
       ),
     );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class AppBarLearnView extends StatelessWidget {
   const AppBarLearnView({super.key});
@@ -10,10 +9,10 @@ class AppBarLearnView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(_title),
-        leading: Icon(Icons.chevron_left),
+        leading: const Icon(Icons.chevron_left),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-          Center(child: CircularProgressIndicator()),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+          const Center(child: CircularProgressIndicator()),
         ],
       ),
     );

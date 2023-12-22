@@ -28,7 +28,7 @@ class PaddingLearn extends StatelessWidget {
             Padding(
               padding: ProjectPadding.pagePaddingRightOnly +
                   ProjectPadding.pagePaddingVertical,
-              child: Text('Emin'),
+              child: const Text('Emin'),
             ),
           ],
         ),
@@ -38,6 +38,6 @@ class PaddingLearn extends StatelessWidget {
 }
 
 class ProjectPadding {
-  static final pagePaddingVertical = const EdgeInsets.symmetric(vertical: 10);
-  static final pagePaddingRightOnly = const EdgeInsets.only(right: 50);
+  static const pagePaddingVertical = EdgeInsets.symmetric(vertical: 10);
+  static const pagePaddingRightOnly = EdgeInsets.only(right: 50);
 }

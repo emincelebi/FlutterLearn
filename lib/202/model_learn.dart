@@ -109,7 +109,7 @@ class PostModel8 {
   String? body;
 
   void updateBody(String data) {
-    if (data != null && data.isNotEmpty) {
+    if (data.isNotEmpty) {
       body = data;
     }
   }

@@ -1,5 +1,4 @@
 import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 mixin LaunchMixin {
   //on State

@@ -23,14 +23,13 @@ class NoteDemos extends StatelessWidget {
             PngImage(name: ImageItems().appleBookWithoutPath),
             _TitleWidget(title: _title),
             Padding(
-              padding:
-                  PaddingItems.horizontalPadding + PaddingItems.verticalPadding,
-              child: _SubTitleWidget(data: _description * 9),
+              padding: PaddingItems.horizontalPadding + PaddingItems.verticalPadding,
+              child: _SubTitleWidget(data: _description * 9, align: TextAlign.end),
             ),
-            Spacer(),
+            const Spacer(),
             _createButton(createNote: _createNote),
             TextButton(onPressed: () {}, child: Text(_importNotes)),
-            SizedBox(
+            const SizedBox(
               height: ButtonHeights.buttonNormalHeight,
             )
           ],
@@ -58,7 +57,7 @@ class _createButton extends StatelessWidget {
         child: Center(
           child: Text(
             _createNote,
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
         ),
       ),
@@ -70,7 +69,7 @@ class _SubTitleWidget extends StatelessWidget {
   const _SubTitleWidget({
     Key? key,
     required this.data,
-    this.align = TextAlign.center,
+    required this.align,
   }) : super(key: key);
   final TextAlign? align;
   final String data;
@@ -79,7 +78,7 @@ class _SubTitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       data,
-      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+      style: Theme.of(context).textTheme.titleMedium?.copyWith(
             color: Colors.black,
           ),
       textAlign: align,
@@ -99,17 +98,13 @@ class _TitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: Theme.of(context)
-          .textTheme
-          .headline5
-          ?.copyWith(color: Colors.black, fontWeight: FontWeight.w800),
+      style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.black, fontWeight: FontWeight.w800),
     );
   }
 }
 
 class PaddingItems {
-  static const EdgeInsets horizontalPadding =
-      EdgeInsets.symmetric(horizontal: 20);
+  static const EdgeInsets horizontalPadding = EdgeInsets.symmetric(horizontal: 20);
   static const EdgeInsets verticalPadding = EdgeInsets.symmetric(vertical: 10);
 }
 

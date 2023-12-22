@@ -6,7 +6,7 @@ class CustomWidgetLearn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String title = 'Food';
+    //const String title = 'Food';
 
     return Scaffold(
       appBar: AppBar(),
@@ -17,15 +17,15 @@ class CustomWidgetLearn extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: SizedBox(
+                width: MediaQuery.of(context).size.width,
                 child: CustomFoodButton(
                   title: 'Food',
                   onPressed: () {},
                 ),
-                width: MediaQuery.of(context).size.width,
               ),
             ),
           ),
-          SizedBox(height: 100),
+          const SizedBox(height: 100),
           CustomFoodButton(
             title: 'Food',
             onPressed: () {},
@@ -46,8 +46,7 @@ class _PaddingUtility {
   final EdgeInsets normal2xPadding = const EdgeInsets.all(16.0);
 }
 
-class CustomFoodButton extends StatelessWidget
-    with _ColorsUtility, _PaddingUtility {
+class CustomFoodButton extends StatelessWidget with _ColorsUtility, _PaddingUtility {
   CustomFoodButton({
     Key? key,
     required this.title,
@@ -61,17 +60,14 @@ class CustomFoodButton extends StatelessWidget
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: redColor,
-        shape: StadiumBorder(),
+        shape: const StadiumBorder(),
       ),
       onPressed: onPressed,
       child: Padding(
         padding: normalPadding,
         child: Text(
           title,
-          style: Theme.of(context)
-              .textTheme
-              .subtitle2
-              ?.copyWith(color: white, fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.titleSmall?.copyWith(color: white, fontWeight: FontWeight.bold),
         ),
       ),
     );

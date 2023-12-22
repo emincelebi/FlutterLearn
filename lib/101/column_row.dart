@@ -35,10 +35,10 @@ class ColumnRowLearn extends StatelessWidget {
                   ),
                 ],
               )),
-          Spacer(
+          const Spacer(
             flex: 2,
           ),
-          Expanded(
+          const Expanded(
             flex: 2,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -47,7 +47,7 @@ class ColumnRowLearn extends StatelessWidget {
               children: [Text('a'), Text('a2'), Text('a3')],
             ),
           ),
-          Container(
+          const SizedBox(
               height: ProjectContainerSizes.cardHeight,
               child: Column(
                 children: [
@@ -64,5 +64,5 @@ class ColumnRowLearn extends StatelessWidget {
 }
 
 class ProjectContainerSizes {
-  static final double cardHeight = 200;
+  static const double cardHeight = 200;
 }

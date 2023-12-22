@@ -9,20 +9,20 @@ class StatelessLearn extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-          TitleTextWidget(text: 'Emin'),
-          TitleTextWidget(text: 'Emin2'),
+          const TitleTextWidget(text: 'Emin'),
+          const TitleTextWidget(text: 'Emin2'),
           _emptyBox(),
-          TitleTextWidget(text: 'Emin3'),
+          const TitleTextWidget(text: 'Emin3'),
           _emptyBox(),
-          TitleTextWidget(text: 'Emin4'),
-          _CustomContainer(),
+          const TitleTextWidget(text: 'Emin4'),
+          const _CustomContainer(),
           _emptyBox(),
         ],
       ),
     );
   }
 
-  SizedBox _emptyBox() => SizedBox(
+  SizedBox _emptyBox() => const SizedBox(
         height: 10,
       );
 }
@@ -49,7 +49,7 @@ class TitleTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: Theme.of(context).textTheme.headline3,
+      style: Theme.of(context).textTheme.displaySmall,
     );
   }
 }

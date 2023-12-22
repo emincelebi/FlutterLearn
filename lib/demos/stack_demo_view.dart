@@ -18,17 +18,17 @@ class StackDemo extends StatelessWidget {
               child: Stack(
                 alignment: Alignment.center,
                 children: [
-                  Positioned.fill(child: RandomImage(), bottom: _cardHeight / 2),
+                  Positioned.fill(bottom: _cardHeight / 2, child: const RandomImage()),
                   Positioned(
-                    child: _cardCustom(),
                     bottom: 0,
                     height: _cardHeight,
                     width: _cardWidth,
+                    child: const _cardCustom(),
                   )
                 ],
               ),
             ),
-            Spacer(
+            const Spacer(
               flex: 6,
             ),
           ],
@@ -43,7 +43,7 @@ class _cardCustom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return const Card(
       color: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(8.0))),
     );

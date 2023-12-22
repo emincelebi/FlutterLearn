@@ -1,4 +1,4 @@
-import 'package:dio/dio.dart';
+//import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/service/comments_learn_view.dart';
 import 'package:flutter_full_learn/202/service/post_model.dart';
@@ -15,14 +15,14 @@ class _ServiceLearnState extends State<ServiceLearn> {
   List<PostModel>? _items;
   String? name;
   bool _isLoading = false;
-  late final Dio _networkManager;
-  final _baseUrl = "https://jsonplaceholder.typicode.com/";
+  //late Dio _networkManager;
+  //final _baseUrl = "https://jsonplaceholder.typicode.com/";
   late final IPostService _postservice;
 
   @override
   void initState() {
     super.initState();
-    _networkManager = Dio(BaseOptions(baseUrl: _baseUrl));
+    //_networkManager = Dio(BaseOptions(baseUrl: _baseUrl));
     _postservice = PostService();
     fetchPostItemsAdvance();
     name = "Emin";

@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: CountdownApp(),
     );
   }
 }
 
 class CountdownApp extends StatefulWidget {
+  const CountdownApp({super.key});
+
   @override
   _CountdownAppState createState() => _CountdownAppState();
 }

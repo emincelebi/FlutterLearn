@@ -8,27 +8,27 @@ class ScaffoldLearnView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Scaffold Samples')),
+        title: const Center(child: Text('Scaffold Samples')),
       ),
-      body: Text('merhaba'),
+      body: const Text('merhaba'),
       backgroundColor: Colors.red,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
               context: context,
-              builder: (context) => Container(
+              builder: (context) => const SizedBox(
                     width: 200,
                     height: 200,
                   ));
         },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      drawer: Drawer(),
+      drawer: const Drawer(),
       bottomNavigationBar: Container(
         decoration: ProjectContainerDecoration(),
         height: 200,
         child: BottomNavigationBar(
-          items: [
+          items: const [
             BottomNavigationBarItem(icon: Icon(Icons.abc_outlined), label: 'a'),
             BottomNavigationBarItem(icon: Icon(Icons.abc_outlined), label: 'b'),
           ],

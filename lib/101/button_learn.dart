@@ -11,10 +11,6 @@ class ButtonLearn extends StatelessWidget {
         children: [
           TextButton(
             onPressed: () {},
-            child: Text(
-              'save',
-              style: Theme.of(context).textTheme.subtitle1,
-            ),
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.resolveWith((states) {
               if (states.contains(MaterialState.pressed)) {
@@ -22,46 +18,50 @@ class ButtonLearn extends StatelessWidget {
               }
               return Colors.blue;
             })),
+            child: Text(
+              'save',
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
           ),
-          ElevatedButton(onPressed: null, child: Text('save')),
-          IconButton(onPressed: null, icon: Icon(Icons.add_call)),
-          FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+          const ElevatedButton(onPressed: null, child: Text('save')),
+          const IconButton(onPressed: null, icon: Icon(Icons.add_call)),
+          FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add)),
           OutlinedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.red),
-              padding: MaterialStateProperty.all(EdgeInsets.all(10)),
+              padding: MaterialStateProperty.all(const EdgeInsets.all(10)),
             ),
             onPressed: () {},
-            child: SizedBox(
+            child: const SizedBox(
               width: 200,
               child: Text('data'),
             ),
           ),
           OutlinedButton.icon(
             onPressed: () {},
-            icon: Icon(Icons.phone_bluetooth_speaker),
-            label: Text('Çağrı'),
+            icon: const Icon(Icons.phone_bluetooth_speaker),
+            label: const Text('Çağrı'),
           ),
-          InkWell(onTap: () {}, child: Text('custom')),
+          InkWell(onTap: () {}, child: const Text('custom')),
           Container(
             height: 200,
             color: Colors.white,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.teal,
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)))),
               onPressed: () {},
               child: Padding(
                 padding:
-                    EdgeInsets.only(top: 20, bottom: 20, left: 40, right: 40),
+                    const EdgeInsets.only(top: 20, bottom: 20, left: 40, right: 40),
                 child: Text(
                   'Place Bid',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ))
         ],

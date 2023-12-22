@@ -14,10 +14,10 @@ class ListTileLearn extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                title: RandomImage(),
-                subtitle: Text('How do you use your card'),
-                leading: Icon(Icons.money),
-                trailing: Icon(Icons.chevron_right),
+                title: const RandomImage(),
+                subtitle: const Text('How do you use your card'),
+                leading: const Icon(Icons.money),
+                trailing: const Icon(Icons.chevron_right),
                 onTap: () {},
               ),
             ),

@@ -32,7 +32,7 @@ class TextLearnView extends StatelessWidget {
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.right,
-              style: Theme.of(context).textTheme.headline5?.copyWith(
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                     color: ProjectColors.welcomeColor,
                   ),
             ),
@@ -46,7 +46,7 @@ class TextLearnView extends StatelessWidget {
 }
 
 class ProjectStyles {
-  static TextStyle welcomeStyles = TextStyle(
+  static TextStyle welcomeStyles = const TextStyle(
     decoration: TextDecoration.underline,
     fontStyle: FontStyle.italic,
     wordSpacing: 2,

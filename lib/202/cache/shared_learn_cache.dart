@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn/202/cache/shared_manager.dart';
 import 'package:flutter_full_learn/202/cache/user_model.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedLearn extends StatefulWidget {
   const SharedLearn({super.key});
@@ -116,8 +115,11 @@ abstract class LoadingStatefull<T extends StatefulWidget> extends State<T> {
   bool isLoading = false;
 
   void changeLoading() {
-    setState(() {
+    if(mounted){
+      setState(() {
       isLoading = !isLoading;
     });
+    }
+    
   }
 }

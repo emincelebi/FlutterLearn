@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ImageLearn extends StatelessWidget {
   const ImageLearn({super.key});
   final String imagepath =
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apple-book.svg/1018px-Apple-book.svg.png";
+      "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1966000/trabzonspor-1966423.jpg";
 
   @override
   Widget build(BuildContext context) {

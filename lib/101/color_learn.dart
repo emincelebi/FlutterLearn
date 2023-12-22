@@ -11,7 +11,7 @@ class ColorLearn extends StatelessWidget {
         children: [
           Container(
             color: ColorItems.pumpkin,
-            child: Text('data'),
+            child: const Text('data'),
           )
         ],
       ),
@@ -20,6 +20,6 @@ class ColorLearn extends StatelessWidget {
 }
 
 class ColorItems {
-  final Color anzac = Color.fromRGBO(219, 174, 51, 1);
-  static final Color pumpkin = Color.fromRGBO(255, 108, 15, 1);
+  final Color anzac = const Color.fromRGBO(219, 174, 51, 1);
+  static const Color pumpkin = Color.fromRGBO(255, 108, 15, 1);
 }

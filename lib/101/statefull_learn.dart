@@ -12,7 +12,7 @@ class StatefullLearn extends StatefulWidget {
 
 class _StatefullLearnState extends State<StatefullLearn> {
   late int _countValue = 0;
-  late int _visitor = 0;
+  //late final int _visitor = 0;
 
   void _updateCount(bool isIncrement) {
     if (isIncrement) {
@@ -27,15 +27,15 @@ class _StatefullLearnState extends State<StatefullLearn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(LanguageItems.welcomeTitle),
+        title: const Text(LanguageItems.welcomeTitle),
       ),
       body: Column(
         children: [
           Center(
-            child: Text(_countValue.toString(), style: Theme.of(context).textTheme.headline3),
+            child: Text(_countValue.toString(), style: Theme.of(context).textTheme.displaySmall),
           ),
-          Placeholder(),
-          CounterHelloButton(),
+          const Placeholder(),
+          const CounterHelloButton(),
         ],
       ),
       floatingActionButton: Row(
@@ -56,7 +56,7 @@ class _StatefullLearnState extends State<StatefullLearn> {
           _updateCount(false);
           print(_countValue);
         },
-        child: Icon(Icons.remove),
+        child: const Icon(Icons.remove),
       ),
     );
   }
@@ -68,7 +68,7 @@ class _StatefullLearnState extends State<StatefullLearn> {
         _updateCount(true);
         print(_countValue);
       },
-      child: Icon(Icons.add),
+      child: const Icon(Icons.add),
     );
   }
 }
